@@ -2,7 +2,7 @@
 import { Performance } from '@/types/api';
 export default async function PerformancesPage() {
   const res = await fetch('http://localhost:8000/api/performances/', { next: { revalidate: 60 } });
-  const performances = await res.json();
+  const performances: Performance[] = await res.json();
 
   return (
     <main className="p-8 max-w-3xl mx-auto">

@@ -2,7 +2,7 @@
 import { Song } from '@/types/api';
 export default async function SongsPage() {
   const res = await fetch('http://localhost:8000/api/songs/', { next: { revalidate: 60 } });
-  const songs = await res.json();
+  const songs: Song[] = await res.json();
 
   return (
     <main className="p-8 max-w-3xl mx-auto">

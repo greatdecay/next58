@@ -2,7 +2,7 @@
 import { Album } from '@/types/api';
 export default async function AlbumsPage() {
   const res = await fetch('http://localhost:8000/api/albums/', { next: { revalidate: 60 } });
-  const albums = await res.json();
+  const albums: Album[] = await res.json();
 
   return (
     <main className="p-8 max-w-3xl mx-auto">

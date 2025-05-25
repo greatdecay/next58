@@ -2,7 +2,7 @@
 import { Venue } from '@/types/api';
 export default async function VenuesPage() {
   const res = await fetch('http://localhost:8000/api/venues/', { next: { revalidate: 60 } });
-  const venues = await res.json();
+  const venues: Venue[] = await res.json();
 
   return (
     <main className="p-8 max-w-3xl mx-auto">
