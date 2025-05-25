@@ -1,4 +1,5 @@
 // src/app/artists/page.tsx
+import { Artist } from '@/types/api';
 export default async function ArtistsPage() {
   const res = await fetch('http://localhost:8000/api/artists/', { next: { revalidate: 60 } });
   const artists = await res.json();

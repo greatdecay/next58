@@ -1,4 +1,5 @@
 // src/app/albums/page.tsx
+import { Album } from '@/types/api';
 export default async function AlbumsPage() {
   const res = await fetch('http://localhost:8000/api/albums/', { next: { revalidate: 60 } });
   const albums = await res.json();
