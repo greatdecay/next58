@@ -1,8 +1,10 @@
-// src/app/venues/page.tsx
 import { Venue } from '@/types/api';
+
 export default async function VenuesPage() {
   const res = await fetch('http://localhost:8000/api/venues/', { next: { revalidate: 60 } });
-  const venues: Venue[] = await res.json();
+  const data = await res.json();
+
+  const venues: Venue[] = data.results;
 
   return (
     <main className="p-8 max-w-3xl mx-auto">
