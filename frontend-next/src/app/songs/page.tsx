@@ -8,7 +8,7 @@ export default async function SongsPage() {
     <main className="p-8 max-w-3xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Songs</h1>
       <ul className="space-y-2">
-        {songs.map((song: any) => (
+        {songs.map((song) => (
           <li key={song.trackID} className="border-b pb-2">
             <strong>{song.trackTitle}</strong>
             <div className="text-sm text-gray-600">{song.byWho}</div>

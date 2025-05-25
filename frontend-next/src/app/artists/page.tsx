@@ -8,7 +8,7 @@ export default async function ArtistsPage() {
     <main className="p-8 max-w-3xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Artists</h1>
       <ul className="space-y-2">
-        {artists.map((artist: any) => (
+        {artists.map((artist) => (
           <li key={artist.external_artist_id} className="border-b pb-2">
             {artist.artist_name}
           </li>
