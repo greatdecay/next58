@@ -6,7 +6,7 @@ import { Song } from '@/types/api';
 export default function SongsPage() {
   const [songs, setSongs] = useState<Song[]>([]);
   const [loading, setLoading] = useState(false);
-  const [nextUrl, setNextUrl] = useState<string | null>('http://localhost:8000/api/songs/?limit=25');
+  const [nextUrl, setNextUrl] = useState<string | null>('/api/songs/?limit=25');
 
   const observerRef = useRef<HTMLDivElement | null>(null);
 
